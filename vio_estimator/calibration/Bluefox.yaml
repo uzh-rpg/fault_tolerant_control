@@ -1,0 +1,54 @@
+label: "bluefox"
+id: bluefox
+cameras:
+- camera:
+    label: dvs
+    id: 0
+    line-delay-nanoseconds: 0
+    image_height: 240
+    image_width: 376
+    type: pinhole
+    intrinsics:
+      cols: 1
+      rows: 4
+      data: [ 235.32727003,  235.28034942,  173.91846277,  114.50144276]
+    distortion:
+      type: radial-tangential
+      parameters:
+        cols: 1
+        rows: 4
+        data:  [-0.30046533,  0.09352444,  0.00021129, -0.00060727]
+  T_B_C:
+    cols: 4
+    rows: 4
+    data: [ 0.99972648, -0.01514404,  0.01782191, -0.01940315,
+           -0.0147933 , -0.99969747, -0.01965017, -0.06617865,
+            0.0181141 ,  0.01938115, -0.99964806, -0.03078283,
+            0.        ,  0.        ,  0.        ,  1.        ]
+
+
+- camera:
+    label: standard
+    id: 1
+    line-delay-nanoseconds: 0
+    image_height: 240
+    image_width: 376
+    type: pinhole
+    intrinsics:
+      cols: 1
+      rows: 4
+      data: [ 235.32727003,  235.28034942,  173.91846277,  114.50144276]
+    distortion:
+      type: radial-tangential
+      parameters:
+        cols: 1
+        rows: 4
+        data: [-0.30046533,  0.09352444,  0.00021129, -0.00060727]
+  T_B_C:
+    cols: 4
+    rows: 4
+    data:   [ 0.99956002 , -0.00300282,   0.02950837, -0.0062436 ,
+             -0.0031255  , -0.99998666,   0.00411213, -0.07115641,
+              0.02949563 , -0.00420255,  -0.99955607, -0.05148073,
+              0.         ,  0.        ,   0.        ,  1.        ]
+

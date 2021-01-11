@@ -1,0 +1,33 @@
+estimate_rate:    200.0
+
+######## complementary filter gains ##########
+p_gain_cf:        0.05
+i_gain_cf:        0.02
+
+p_gain_cf_yaw:    0.5
+i_gain_cf_yaw:    0.05
+
+######## ekf params ###################
+Q:                80000.0
+R:                1.0
+Q_pos:            0.001
+Q_vel:            0.01
+R_pos:            1
+#R_vel:           0.001
+
+######## rotation compensation ###############
+dx:               0.0102    # estimated dispacement from c.g to imu
+dy:               -0.0053
+dz:               -0.0021
+displacment:      true
+rotation:         true
+delay:            false 
+
+####### imu bias ############################
+bgx:              0.0
+bgy:              0.0
+bgz:              -0.0
+
+bax:              0.001
+bay:              -0.13
+baz:              0.03

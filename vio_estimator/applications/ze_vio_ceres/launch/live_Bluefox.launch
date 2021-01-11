@@ -1,0 +1,35 @@
+<launch>
+  <arg name="camera_name" default="Bluefox25001265"/>
+  <arg name="timeshift_cam_imu"   default="0.00" />
+  <arg name="frame_size"   default="15000" />
+ 
+  <node name="ze_vio_ceres" pkg="ze_vio_ceres" type="ze_vio_ceres_node"
+    output="screen" required="true"
+    args="
+
+    --data_source=2
+    --vio_use_events=0
+    --vio_use_events_and_images=0
+    --vio_rescale_intrinsics_for_distortion=true
+
+    --topic_cam0=/camera/image_raw
+    --topic_imu0=/imu
+
+    --timeshift_cam_imu=$(arg timeshift_cam_imu)
+    --calib_filename=$(find ze_vio_ceres)/../../calibration/$(arg camera_name).yaml
+
+    --flagfile=$(find ze_vio_ceres)/cfg/vio_base.conf
+
+
+    --vmodule=feature_tracker=0
+    --colorlogtostderr=1
+    --logtostderr=1
+    --alsologtostderr=1
+    --vio_viz_feature_tracks=False
+    --vio_viz_feature_tracks_length=0
+    ">
+  </node>
+
+  <node name="visualisation" pkg="rviz" type="rviz" output="screen" args="-d $(find ze_visualization)/rviz/ze.rviz" />
+
+</launch>

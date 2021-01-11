@@ -1,0 +1,33 @@
+<launch>
+    <arg name="camera" default="Bluefox"/>
+
+   <!-- <node pkg="ctrl_bridge" name="ctrl_bridge" type="ctrl_bridge_node" output="screen">
+        <rosparam file="$(find ctrl_bridge)/parameters/default.yaml"/>
+    </node> -->
+
+   <node pkg="ftc_ctrl" name="ftc_ctrl" type="ftc_ctrl" output="screen">
+        <rosparam file="$(find ftc_ctrl)/parameters/default.yaml"/>
+    </node>
+
+   <node pkg="ftc_state_est" name="ftc_state_est" type="ftc_state_est" output="screen">
+        <rosparam file="$(find ftc_state_est)/parameters/default.yaml"/>
+    </node>
+
+    <group if="$(eval camera == 'Bluefox')">
+        <include file="$(find bluefox_ros)/launch/bluefox_camera_node.launch" />
+    </group>
+
+    <group if="$(eval camera == 'Davis346')">
+        <node name="davis_ros_driver" pkg="davis_ros_driver" type="davis_ros_driver" >
+            <param name="serial_number" type="str" value="03460002" />
+        </node>
+    </group>
+
+    <node name="terarangerone_node" pkg="terarangerone" type="terarangerone_node" >
+        <param name="portname" type="str" value="/dev/ttyUSB0" />
+    </node>
+
+    <node pkg="joy" name="joy_node" type="joy_node" output="screen">
+        <param name="joy_node/dev" value="/dev/input/js0"/>
+    </node>   
+</launch>

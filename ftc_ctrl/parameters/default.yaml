@@ -1,0 +1,50 @@
+ctrl_rate: 200.0 # control loop rate [Hz]
+failed_prop:    1     #0, 1, 2, 3
+
+############ gains for normal mode ###############
+kp_pos:         [2.0, 2.0, 10.0]
+kd_pos:         [3.0, 3.0, 8.0]
+ki_pos:         [0.2, 0.2, 0.5]
+
+k_att:          [220.0, 35.0, 8.0] # kp, kd, ki 
+k_yaw:          [2.0, 10.0, 1.0]   # kp, kd, ki
+
+############# gains for failure mode ########
+
+kp_pos_fail:    [1.0, 1.0, 10.0]
+kd_pos_fail:    [2.0, 2.0, 8.0]
+ki_pos_fail:    [0.2, 0.2, 0.5]
+k_att_fail:     [200.0, 30.0, 10.0] # kp, kd, ki
+
+n_primary_axis: 0.15  # primary axis projection on xb-yb plane
+
+############ Parameters ##################
+mass:           0.977    # quadrotor mass [kg]
+Ix:             2.9e-3  # Inertia Ix [kg m^2]       
+Iy:             2.6e-3  # Inertia Iy [kg m^2]      
+Iz:             4.5e-3  # Inertia Iz [kg m^2]      
+
+lever_arm_x:  [0.1,   0.1,    -0.1,   -0.1] #[m]
+lever_arm_y:  [0.08, -0.08,   -0.08,   0.08] #[m]
+drag_coeff:   [0.01,  -0.01, 0.01,  -0.01] # rotor torque to thrust ratio [Nm / N]  
+cg_bias:      [0.0, 0.0, 0.0] # center of mass displacement [m] 
+
+dx:             0.0     # c.g displacement [m]
+dy:             0.0     
+dz:             0.0     
+
+minMot: 200  # min rotor thrust command
+maxMot: 1700 # max rotor thrust command   
+
+mot_coeff1: 4.623452619996466e-06
+mot_coeff2: 0.0014142896764618592
+mot_coeff3: -1.0321173041040559
+
+############# Other params ################
+maxVertAcc: 4.0 # max vertical acceleration
+maxHorzAcc: 4.0 # max horizontal acceleration
+maxNbErrInt: 4.0 # maximum integral error for nb
+maxPosErrInt: 10.0 # maximum integral error for pos
+maxHorzAccFail: 3.0 # max horiz acc in fail mode
+use_sigmoid_traj: true # use sigmoid traj instead of direct waypoint tracking
+use_notch_filter: true # filter the periodic  pos / vel

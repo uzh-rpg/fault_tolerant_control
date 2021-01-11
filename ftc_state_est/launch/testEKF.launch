@@ -1,0 +1,16 @@
+<launch>
+    <arg name="dir_name" default="/home/sihao/data/"/>
+    <arg name="dataset_name" default="EKF_2020-06-19-16-38-41.bag"/>
+
+    <node pkg="rosbag" type="play" name="player" 
+        args="-r1 -s 0.0 $(arg dir_name)/$(arg dataset_name)" />
+
+    <node pkg="ftc_state_est" name="ftc_state_est" type="ftc_state_est" output="screen">
+            <rosparam file="$(find ftc_state_est)/parameters/default.yaml"/>
+             <!-- <param name="cov_acc" value="0.1"/> -->
+    </node>
+
+    <node pkg="rosbag" type="record" name="recorder" 
+        args="-O $(arg dir_name)/EKF_$(arg dataset_name) /optitrack/cuckoo /filtered_state_est"/>  
+    
+</launch>

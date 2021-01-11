@@ -1,0 +1,12 @@
+<launch>
+    <arg name="dir_name" default="/home/sihao/data"/>
+    <arg name="dataset_name" default="VIO_result_2020-10-06-11-59-02.bag"/>
+
+    <node pkg="rosbag" type="play" name="player" 
+        args="-r1 -s 0.0 $(arg dir_name)/$(arg dataset_name) --topics /imu /terarangerone /ze_vio/odometry" />
+
+    <node pkg="ftc_state_est" name="ftc_state_est" type="ftc_state_est" output="screen">
+            <rosparam file="$(find ftc_state_est)/parameters/default.yaml"/>
+    </node>
+
+</launch>
