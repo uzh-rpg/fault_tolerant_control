@@ -26,11 +26,11 @@ IEEE Robot. Autom. Lett. (RA-L). 2021. [PDF](http://rpg.ifi.uzh.ch/docs/RAL21_Su
 	  volume={},
 	  number={},
 	  pages={1-1},
-	  doi={10.1109/LRA.2020.3048875}}
-<!--	  
+	  doi={10.1109/LRA.2020.3048875}}  
+	  
 # Video
 
-<!--Please check our [Video](https://youtu.be/Ww8u0KH7Ugs) -->
+Please check our [Video](https://youtu.be/Ww8u0KH7Ugs)
 
 # Structure
 
