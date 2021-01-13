@@ -16,7 +16,7 @@ If you use this work in an academic context, please cite the following RA-L publ
 
 S. Sun, G. Cioffi, C. de Visser and D. Scaramuzza,
 "**Autonomous Quadrotor Flight despite Rotor Failure with Onboard Vision Sensors: Frames vs. Events**,"
-IEEE Robot. Autom. Lett. (RA-L). 2021. [PDF](http://rpg.ifi.uzh.ch/docs/RAL21_Sun.pdf)
+IEEE Robot. Autom. Lett. (RA-L). 2021. [PDF](http://rpg.ifi.uzh.ch/docs/RAL21_Sun.pdf), [VIDEO](https://youtu.be/Ww8u0KH7Ugs)
 
     @ARTICLE{SunAutonomous2021,
 	  author={S. {Sun} and G. {Cioffi} and C. {de Visser} and D. {Scaramuzza}},
@@ -28,10 +28,6 @@ IEEE Robot. Autom. Lett. (RA-L). 2021. [PDF](http://rpg.ifi.uzh.ch/docs/RAL21_Su
 	  pages={1-1},
 	  doi={10.1109/LRA.2020.3048875}}  
 	  
-# Video
-
-Please check our [Video](https://youtu.be/Ww8u0KH7Ugs)
-
 # Structure
 
 #### \vio_estimator
