@@ -75,7 +75,7 @@ in /vio_estimator/common/ze_common/CMakeLists.txt and /vio_estimator/common/ze_c
 in /fast_neon package, use branch /test/aarch64-compilation by
 
 	git checkout /test/aarch64-compilation
-# Test the vision-based state esimtator
+# Test the vision-based state estimator
 You can test the vision-based state estimator by running this [**rosbag**](https://seafile.ifi.uzh.ch/d/44ac95d256124af287a3/) recorded from real-flights using a standard camera ([mvBLuefox](https://www.matrix-vision.com/USB2.0-industrial-camera-mvbluefox.html)). 
 
 	roslaunch ze_vio_ceres live_Bluefox.launch
