@@ -23,9 +23,9 @@ IEEE Robot. Autom. Lett. (RA-L). 2021. [PDF](http://rpg.ifi.uzh.ch/docs/RAL21_Su
 	  journal={IEEE Robotics and Automation Letters}, 
 	  title={Autonomous Quadrotor Flight despite Rotor Failure with Onboard Vision Sensors: Frames vs. Events}, 
 	  year={2021},
-	  volume={},
-	  number={},
-	  pages={1-1},
+	  volume={6},
+	  number={2},
+	  pages={580-587},
 	  doi={10.1109/LRA.2020.3048875}}  
 	  
 # Structure
