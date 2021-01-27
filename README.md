@@ -81,7 +81,7 @@ You can test the vision-based state estimator by running this [**rosbag**](https
 	roslaunch ze_vio_ceres live_Bluefox.launch
 	rosbag play <directory_of_the_bag>/data_bluefox.bag
 	
-# Simulation
+# Test the Flight Controller in the Simulation
 You can test the flight controller in [RotorS](https://github.com/ethz-asl/rotors_simulator), a MAV gazebo simulator. First of all, please install [Gazebo](http://gazebosim.org/tutorials?tut=ros_installing&cat=connect_ros). 
 
 Then run the following launch file 
